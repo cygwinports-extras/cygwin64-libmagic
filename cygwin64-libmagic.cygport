@@ -1,0 +1,17 @@
+CROSS_HOST="x86_64-pc-cygwin"
+inherit cross
+
+NAME="cygwin64-libmagic"
+VERSION=5.11
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="libmagic (from 'file') for Cygwin 64bit toolchain"
+DESCRIPTION="With file you can obtain information on the file type of a specified
+file. File type recognition is controlled by the file /usr/share/file/magic
+which contains the classification criteria."
+SRC_URI="ftp://ftp.astron.com/pub/file/file-${VERSION}.tar.gz"
+SRC_DIR="file-${VERSION}"
+
+MAKEOPTS+=" bin_PROGRAMS= man_MANS= pkgdata_DATA= "
+
+KEEP_LA_FILES="none"
